@@ -37,7 +37,7 @@
     </style>
 </head>
 
-<body class="bg-white flex flex-col items-center justify-center h-screen p-4">
+<body class="bg-white flex flex-col items-center justify-between h-screen p-4">
     <!-- Scientific Notation -->
     <div class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-black flex items-center mb-4">
         <input type="text" id="coefficient" value="3.1" class="bg-gray-200 rounded-lg text-center focus:outline-none appearance-none">
@@ -53,6 +53,11 @@
             &#8594;
         </button>
     </div>
+
+    <!-- Footer -->
+    <footer class="mt-8 text-center text-gray-600 text-lg">
+        This app was created by Azad Alkurdi for Zayed Higher Organization Students
+    </footer>
 
     <script>
         const coefficientInput = document.getElementById('coefficient');
@@ -87,13 +92,13 @@
             let exponent = parseInt(exponentElement.textContent);
 
             if (direction === 'left') {
-                // Move decimal to the left (divide by 10) and increase the exponent
+                // Move decimal to the left (divide by 10) and adjust the exponent accordingly
                 coefficient = (coefficient / 10).toFixed(10); // Limit to 10 decimal places to avoid floating-point errors
-                exponent += 1;
+                exponent += coefficient > 0 ? 1 : -1; // Increase exponent if positive, decrease if negative
             } else if (direction === 'right') {
-                // Move decimal to the right (multiply by 10) and decrease the exponent
+                // Move decimal to the right (multiply by 10) and adjust the exponent accordingly
                 coefficient = (coefficient * 10).toFixed(10); // Limit to 10 decimal places to avoid floating-point errors
-                exponent -= 1;
+                exponent -= coefficient > 0 ? 1 : -1; // Decrease exponent if positive, increase if negative
             }
 
             // Remove unnecessary trailing zeros after formatting
