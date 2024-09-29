@@ -25,7 +25,6 @@
 
         /* Ensure the input value is fully visible and dynamically adjustable */
         #coefficient {
-            background-color: #e5e7eb;
             /* Tailwind's gray-200 equivalent */
             border-radius: 0.5rem;
             /* rounded-lg equivalent */
@@ -38,25 +37,30 @@
 </head>
 
 <body class="bg-white flex flex-col items-center justify-between h-screen p-4">
-    <!-- Scientific Notation -->
-    <div class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-black flex items-center mb-4">
-        <input type="text" id="coefficient" value="3.1" class="bg-gray-200 rounded-lg text-center focus:outline-none appearance-none">
-        <span id="notation-part" class="ml-1">× 10<sup id="exponent" class="text-violet-500">0</sup></span>
-    </div>
+    <!-- Main Content -->
+    <h1 class="text-4xl bg-blue-50 rounded-lg p-5 w-full text-center">Scientific Notation </br> الترميز العلمي</h1>
+    <div class="flex flex-col items-center justify-center flex-grow">
+        
+        <!-- Scientific Notation -->
+        <div class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-black flex items-center mb-4">
+            <input type="text" id="coefficient" value="3.1" class="bg-gray-100 rounded-lg text-center focus:outline-none appearance-none">
+            <span id="notation-part" class="ml-1">× 10<sup id="exponent" class="text-violet-500">0</sup></span>
+        </div>
 
-    <!-- Arrow Buttons -->
-    <div class="flex space-x-8">
-        <button id="left-arrow" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-gray-500 hover:text-gray-800">
-            &#8592;
-        </button>
-        <button id="right-arrow" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-gray-500 hover:text-gray-800">
-            &#8594;
-        </button>
+        <!-- Arrow Buttons -->
+        <div class="flex space-x-8">
+            <button id="left-arrow" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-gray-500 hover:text-gray-800">
+                &#8592;
+            </button>
+            <button id="right-arrow" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-gray-500 hover:text-gray-800">
+                &#8594;
+            </button>
+        </div>
     </div>
 
     <!-- Footer -->
-    <footer class="mt-8 text-center text-gray-600 text-lg">
-        This app was created by Azad Alkurdi for Zayed Higher Organization Students
+    <footer class="bg-gray-200 p-4 text-center text-gray-600 text-lg w-full">
+        This app was created by Azad Alkurdi for Zayed Higher Organization Students [Latifa, Mansour, Abdulrahman, Ahmad] ♥
     </footer>
 
     <script>
